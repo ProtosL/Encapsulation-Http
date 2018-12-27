@@ -37,8 +37,8 @@ _axios.interceptors.request.use(config => {
     return config
 }, error => {
     // Do something with request error
-    return Promise.reject(error);
-});
+    return Promise.reject(error)
+})
 
 _axios.interceptors.response.use(response => {
     removeQueue(response.config)
@@ -50,7 +50,7 @@ _axios.interceptors.response.use(response => {
     if (error.response) {
         removeQueue(error.response.config)
     }
-    return Promise.reject(error);
+    return Promise.reject(error)
 })
 
 export default _axios

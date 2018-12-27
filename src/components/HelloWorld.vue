@@ -21,26 +21,26 @@ export default {
     },
     methods: {
         async testNormal () {
-            this.res = await this.$http.post('normal')
+            this.res = await this.$store.dispatch('testApi/testNormal')
         },
         async testSlow () {
-            this.res = await this.$http.post('slow')
+            this.res = await this.$store.dispatch('testApi/testSlow')
         },
         async testErrorData () {
             try {
-                this.res = await this.$http.post('error-data')
+                this.res = await this.$store.dispatch('testApi/testErrorData')
             } catch (e) {
                 console.log(e)
             }
         },
         async testErrorCode () {
-            this.res = await this.$http.post('error-code')
+            this.res = await this.$store.dispatch('testApi/testErrorCode')
         },
         async testCode403 () {
-            this.res = await this.$http.post('code-403')
+            this.res = await this.$store.dispatch('testApi/testCode403')
         },
         async testCode401 () {
-            this.res = await this.$http.post('code-401')
+            this.res = await this.$store.dispatch('testApi/testCode401')
         }
     }
 }
