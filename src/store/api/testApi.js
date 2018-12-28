@@ -8,22 +8,22 @@ const getters = {
 }
 
 const actions = {
-    async testNormal() {
+    testNormal () {
         return $http.post('normal')
     },
-    async testSlow() {
+    testSlow () {
         return $http.post('slow')
     },
-    async testErrorData() {
+    testErrorData () {
         return $http.post('error-data')
     },
-    async testErrorCode() {
+    testErrorCode () {
         return $http.post('error-code')
     },
-    async testCode403() {
+    testCode403 () {
         return $http.post('code-403')
     },
-    async testCode401() {
+    testCode401 () {
         return $http.post('code-401')
     }
 }
